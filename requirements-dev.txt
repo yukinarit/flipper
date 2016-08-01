@@ -1,0 +1,6 @@
+mecab-python3==0.7
+requests==2.10.0
+six==1.10.0
+slackclient==1.0.1
+websocket-client==0.37.0
+pytest==2.9.2
