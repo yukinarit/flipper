@@ -3,15 +3,51 @@ Flipper: Bot interface of Japanese Furigana Engine
 
 Example
 -------
-TODO
+.. image:: assets/example.png
 
 Installation
 ------------
-TODO
+
+- Install MeCab
+
+.. code-block:: bash
+
+    git clone https://github.com/taku910/mecab.git
+    cd mecab/mecab
+    ./configure
+    make && sudo make install
+
+    cd ../mecab-ipa
+    ./configure --with-charset=utf8
+    make && sudo make install
+
+- Install Flipper
+
+.. code-block:: bash
+
+    git clone git@github.com:yukinarit/flipper.git
+    cd flipper
+    python setup.py install
+
+- Create a Slack bot user and its API token
+https://api.slack.com/bot-users
+
+- Run flipper
+
+.. code-block:: bash
+
+   export FLIPPER_BOT_TOKEN=YOUR_BOT_TOKEN
+   export FLIPPER_BOT_ID=`python scripts/print_bot_id.py`
+   export LD_LIBRARY_PATH=YOUR_MECAB_INSTALLATION_DIR
+   flipper
+
 
 Tests
 -----
-TODO
+
+.. code-block:: bash
+
+    $ py.test
 
 License
 -------
